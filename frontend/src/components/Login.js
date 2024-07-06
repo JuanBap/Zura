@@ -18,9 +18,6 @@ const Login = () => {
       });
       const data = await response.json();
       setMessage(data.message);
-      if (data.token) {
-        localStorage.setItem('token', data.token);
-      }
     } catch (error) {
       console.error('Error:', error);
     }
@@ -28,7 +25,7 @@ const Login = () => {
 
   return (
     <div>
-      <h2>Inicio de Sesión</h2>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -42,7 +39,7 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Iniciar Sesión</button>
+        <button type="submit">Login</button>
       </form>
       <p>{message}</p>
     </div>
