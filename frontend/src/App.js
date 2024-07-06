@@ -4,6 +4,8 @@ import logo from './logo.svg';
 import './App.css';
 import Register from './components/Register';
 import Login from './components/Login';
+import ClientList from './components/ClientList';
+import ClientForm from './components/ClientForm';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Routes>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/clients" element={<ClientList />} />
+          <Route path="/client/new" element={<ClientForm />} />
         </Routes>
       </div>
     </Router>
